@@ -72,7 +72,7 @@ contract NonceBloxLottery is VRFConsumerBase, Ownable{
     /**
     joinGame is called when a player wants to enter the game
      */
-    function PlayLottery() external payable {
+    function PlayLottery() public payable {
         // Check if a game is already running
         require(lottery_state == LOTTERY_STATE.OPEN, "Game has not been started yet");
         // Check the 1 hour time limit to participate in the game
